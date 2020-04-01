@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using News.Models;
 
 namespace News.Data
 {
@@ -12,5 +13,7 @@ namespace News.Data
             : base(options)
         {
         }
+
+        public DbSet<Category> Category { get; set; }
     }
 }
